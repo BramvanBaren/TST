@@ -21,6 +21,8 @@ function Auto(merk, bouwjaar) {
 function Voorraad(item, aantal) {
     let artikel = item;
     let voorraad = aantal;
+    let meerVoorraad = voorraad +1;
+    let minderVoorraad = voorraad -1;
 
     this.getVoorraad = function () {
         return voorraad;
@@ -39,11 +41,11 @@ function Voorraad(item, aantal) {
         voorraad = voorraad +1;
     }
 
-    this.meerVoorraad = function () {
-        voorraad = voorraad +5;
+    this.hogereVoorraad = function () {
+        voorraad = voorraad +meerVoorraad;
     }
 
-    this.minderVoorraad = function () {
-        voorraad = voorraad -5;
+    this.lagereVoorraad = function () {
+        voorraad = voorraad +minderVoorraad;
     }
 }
